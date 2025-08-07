@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Simple EJS app
+        </title>
+    </head>
+    <body>
+        <h1> Superhero alias Information</h1>
+        <% if (locals.aliases) { %>
+            <ul>
+                <% aliases.forEach(function(alias) { %>
+                    <li>
+                        <strong><%= alias %></strong>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+    </body>
+</html>

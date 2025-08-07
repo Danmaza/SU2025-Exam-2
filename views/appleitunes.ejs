@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Simple EJS app
+        </title>
+    </head>
+    <body>
+        
+        <h1> Apple Music results </h1>
+        <% if (locals.music) { %>
+            <p>WE HAVE MUSIC</p>
+            Total Songs:
+            <%= locals.music.resultCount %>
+            <p>First song is: </p>
+            <p><%= locals.music.results[0].collectionName %></p>
+            <p>And it has the following description: </p>
+            <p><%= locals.music.results[0].description %></p>
+            
+            <% } %>
+        <br>
+        <% if (!locals.music) { %>
+            <p>WE HAVE NO MUSIC</p>
+        <% } %>
+
+    </body>
+</html>
